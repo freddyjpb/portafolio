@@ -77,21 +77,25 @@ li > a {
 }
 
 .div-section-1 {
+    border: 1px dashed green; 
     margin-top: 60px;
     padding: 0 64px 0;
     width: 100%; height: auto;
+    max-height: 760px;
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
 }
 
 .div-photo {
     width: 100%; height: calc(100vw - 128px);
+    max-width: 500px; max-height: 500px;
     z-index: 2;
 }
 
 .div-photo-circle { 
     background-color: var(--gray);
     width: 100%; height: 100%;
+    max-width: 500px; max-height: 500px;
     border-radius: 50%;
     box-shadow: var(--aquamarine) 0px 8px 16px 0px;
 }
@@ -106,6 +110,7 @@ li > a {
 .div-description {
     /*border: 1px dashed red;*/
     width: 100%; height:auto;
+    max-width: 500px;
     padding-top: 0.75rem;
 }
 
@@ -116,9 +121,9 @@ li > a {
 
 h1 {
     color: var(--aquamarine);
+    font-size: 50px;
     font-style: normal;
     font-weight: bold;
-    font-size: 3.125rem;
 }
 
 h2 {
@@ -171,9 +176,9 @@ h3 {
 /* S E C C I O N   2
 /*=============================================================================================*/
 .div-section-2 {
-    border: 1px dashed red;
+    border: 1px dashed green;
     width: 100%; height: auto;
-    padding: 1rem 1rem 1rem;
+    padding: 16px 16px 16px;
     display: flex; flex-direction: row;
     justify-content: space-evenly; align-items: center;
 }
@@ -197,16 +202,16 @@ h3 {
 }
 
 .div-social-networks-2 > .circulo > .icon {
-    width: 2.5rem; height: auto;
+    width: 50%; height: auto;
 }
 
 /*=============================================================================================*/
 /* S E C C I O N   3
 /*=============================================================================================*/
 .div-section-3 {
-    border: 1px dashed red;    
+    border: 1px dashed green;    
     width: 100%; height: auto;
-    padding: 3rem 1rem 3rem;
+    padding: 48px 16px 48px;
     text-align: center;
 }
 
@@ -214,27 +219,28 @@ h3 {
 /* S E C C I O N   4
 /*=============================================================================================*/
 .div-section-4 {
-    border: 1px dashed red;    
+    border: 1px dashed green;    
     width: 100%; height: auto;
-    padding: 3rem 1rem 3rem;
+    padding: 48px 16px 48px;
     text-align: center;
 }
 
 /*=============================================================================================*/
 /* S E C C I O N   5
 /*=============================================================================================*/
-.div-section-5 {  
-    border: 1px dashed red;
+.div-section-5 {
+    border: 1px dashed green;   
     width: 100%; height: auto;
-    padding: 3rem 1rem 3rem;
+    padding: 48px 16px 48px;
     display: flex; flex-direction: column; 
     justify-content: center; align-items: center;
 }
 
 .divMain7Grd {
-    margin-top: 2rem;
-    width: 100%; height:10rem;
-    display: grid; grid-gap: 2rem;
+    margin-top: 32px;
+    width: 100%; height:160px;
+    max-width: 1000px; height: auto;
+    display: grid; grid-gap: 32px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -249,63 +255,107 @@ h3 {
 
 .habilityLabel { 
     color: var(--white); 
-    width: 100%; 
-    font-size: 1rem;
-    font-weight: bold;
+    width: 100%;
+    font-weight: bold; 
+    font-size: 16px;
     text-align: left; 
 }
 
 .letter1 { 
     color: var(--aquamarine);
-    font-size: 0.80rem;
+    font-size: 14px;
 }
 
 .container {
     background-color: var(--white);
-    margin-top: 0.25rem;
-    width: 100%; height: 0.75rem;
-    border-radius: 1rem;
+    width: 100%; height: 3vw;
+    max-height: 20px;
+    border-radius: 16px;
 }
 
 .skill {
     background-color: var(--aquamarine);
-    width: 100%; height: 0.75rem;
-    padding: 1%;
-    border-radius: 1rem;
-    /*font-size: 20px;*/
+    /*padding: 1%;*/
+    border-radius: 16px;
     text-align: right;
 }
 
-.item1 { width: 95%; }
-.item2 { width: 95%; }
-.item3 { width: 80%; }
+.item1 { width: 95%; height: 100%;}
+.item2 { width: 95%; height: 100%;}
+.item3 { width: 80%; height: 100%;}
+
+/*=============================================================================================*/
+/* S E C C I O N   6
+/*=============================================================================================*/
+.div-section-6 {
+    border: 1px dashed green;    
+    width: 100%; height: auto;
+    padding: 48px 16px 48px;
+    text-align: center;
+}
+
+/*=============================================================================================*/
+/* S E C C I O N   7
+/*=============================================================================================*/
+.div-section-7 {
+    border: 1px dashed green;
+    padding: 16px 16px 16px;    
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
+}
+
+.contact-information {
+    /*border: 1px dashed green;*/
+    padding: 16px; gap: 16px;   
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
+}
+
+.cellphone-card {
+    background-image: url(../vectors/Ellipse\ 14.svg);
+    background-color: var(--white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 -1rem;
+    width: 50vw; height: 50vw;
+    max-width: 250px; max-height: 250px;
+    border-radius: 16px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
+}
+
+.cellphone-card > .image {
+    width: 40%;
+}
+
+.mail-card {
+    background-image: url(../vectors/Ellipse\ 14.svg);
+    background-color: var(--white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 -1rem;
+    width: 50vw; height: 50vw;
+    max-width: 250px; max-height: 250px;
+    border-radius: 1rem;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
+}
+
+.contact-information-letter {
+    color: var(--black); 
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 /*=============================================================================================*/
 /* M E D I A    Q U E R Y S
 /*=============================================================================================*/
-@media screen and ( min-width: 628px ){
-    .div-section-1 {
-        max-height: 760px;
-    }
-
-    .div-photo {
-        max-width: 500px;
-        max-height: 500px;
-    }
-
-    .div-photo-circle { 
-        max-width: 500px; height: 500px;
-    }
-    
-    .div-photo-circle img {
-        width: 100%; height: auto;    
-    }
-    
-    .div-description {
-        max-width: 500px;
-    }
+@media screen and ( min-width: 548px ){
+    .contact-information {
+        display: flex; flex-direction: row;
+        justify-content: center; align-items: center; 
+    } 
 }
-
 
 @media screen and ( min-width: 768px ){
     label{
