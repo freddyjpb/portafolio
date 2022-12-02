@@ -214,7 +214,7 @@ li > a {
 /* S E C C I O N   3
 /*=============================================================================================*/
 .div-section-3 {
-    /*border: 1px dashed red;*/
+    /*border: 1px dashed yellow;*/
     width: 100%; height: auto;
     padding: 48px 16px 48px;
     text-align: center;
@@ -222,7 +222,7 @@ li > a {
 }
 
 .div-about-me {
-    /*border: 1px dashed red;*/
+    /*border: 1px dashed yellow;*/
     width: 100%; height: auto;
     max-width: 1000px;
     text-align: center;
@@ -233,11 +233,80 @@ li > a {
 /* S E C C I O N   4
 /*=============================================================================================*/
 .div-section-4 {
+    /*border: 1px dashed yellow;*/
     width: 100%; height: auto;
-    padding: 48px 16px 48px;
+    padding: 16px 0 16px;
     text-align: center;
-    overflow-x: hidden;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
 }
+
+@-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-58vw * 3));
+    }
+}
+
+.slider {
+    /*border: 1px dashed yellow;*/    
+    width: 100%; height: auto;
+    max-width: 1000px;
+    /*margin: auto;*/
+    overflow: hidden;
+    position: relative;
+}
+
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: auto;
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    width: calc(50vw * 6);
+    gap: 16px;
+    display: flex; 
+  }
+
+  .slider .slide-service-information-card {
+    background-image: url(../vectors/Ellipse\ 14.svg);
+    background-color: var(--white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 -16px;
+    width: 50vw; height: 80vw;
+    min-width: 160px; min-height: 256px;
+    max-width: 250px; max-height: 400px;
+    gap: 16px;
+    border-radius: 16px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+  }
 
 /*=============================================================================================*/
 /* S E C C I O N   5
@@ -310,13 +379,14 @@ li > a {
 /* S E C C I O N   7
 /*=============================================================================================*/
 .div-section-7 {
+    /*border: 1px dashed yellow;*/ 
     padding: 16px 16px 16px;    
     display: flex; flex-direction: column;
     justify-content: center; align-items: center; 
 }
 
 .contact-information {
-    /*border: 1px dashed green;*/
+    /*border: 1px dashed yellow;*/ 
     padding: 16px; gap: 16px;   
     display: flex; flex-direction: column;
     justify-content: center; align-items: center; 
@@ -370,6 +440,11 @@ li > a {
         display: flex; flex-direction: row;
         justify-content: center; align-items: center; 
     } 
+
+    .service-information {
+        overflow-x: hidden;
+    }
+
 }
 
 @media screen and ( min-width: 768px ){
